@@ -15,7 +15,7 @@ body
 {
     font-family: Helvetica, Arial;
     margin: 0;
-    background-color: #ffeff5;
+    background-color: #fff7f7;
 }
 
 #app-cover
@@ -71,7 +71,7 @@ body
     right: 15px;
     left: 15px;
     padding: 13px 22px 10px 184px;
-    background-color: #fff7f7;
+    background-color: #E0EDF4;
     border-radius: 15px 15px 0 0;
     transition: 0.3s ease top;
     z-index: 1;
@@ -124,7 +124,7 @@ body
 
 #track-time.active #current-time, #track-time.active #track-length
 {
-    color: #f86d92;
+    color: #45b6fe;
     background-color: transparent;
 }
 
@@ -137,7 +137,7 @@ body
 
 #s-area
 {
-    background-color:#ffe8ee;
+    background-color: #bcd2e8;
     cursor: pointer;
 }
 
@@ -165,7 +165,7 @@ body
 
 #ins-time, #s-hover
 {
-    background-color: #3b3d50;
+    background-color: #45b6fe;
 }
 
 #seek-bar
@@ -176,7 +176,7 @@ body
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #fd6d94;
+    background-color: #45b6fe;
     transition: 0.2s ease width;
     z-index: 1;
 }
@@ -185,7 +185,7 @@ body
 {
     position: relative;
     height: 100%;
-    background-color: #fff;
+    background-color: #91BAD6;
     box-shadow: 0 1px 5px #cecece;
     border-radius: 15px;
     z-index: 2;
@@ -320,7 +320,7 @@ body
     width: 26px;
     height: 26px;
     padding: 25px;
-    background-color: #fff;
+    background-color: #ff;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -328,7 +328,7 @@ body
 .button i
 {
     display: block;
-    color: #d6dee7;
+    color: #fff;
     font-size: 26px;
     text-align: center;
     line-height: 1;
@@ -341,12 +341,12 @@ body
 
 .button:hover
 {
-    background-color: #d6d6de;
+    background-color: #fff;
 }
 
 .button:hover i
 {
-    color: #fff;
+    color: #91BAD6;
 }
 
 #ytd-url {
@@ -388,11 +388,11 @@ body
             </div>
             <div id="player-content">
                 <div id="album-art">
-                    <img src="https://yuqing-guo.github.io/musicwidget/sungo.jpg" class="active" id="_1">
+                    <img src="https://yuqing-guo.github.io/musicwidget/theone.jpg" class="active" id="_1">
                     <img src="https://yuqing-guo.github.io/musicwidget/supernovalove.jpg" id="_2">
                     <img src="https://yuqing-guo.github.io/musicwidget/love.jpg" id="_3">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
+                    <img src="https://yuqing-guo.github.io/musicwidget/Beforespringends.jpg" id="_4">
+                    <img src="https://yuqing-guo.github.io/musicwidget/yoursummermysea.jpg" id="_5">
                     <div id="buffer-box">Buffering ...</div>
                 </div>
                 <div id="player-controls">
@@ -423,7 +423,7 @@ body
   <script type="text/javascript">
     $(function()
 {
-    var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, albums = ['sun go','supernova love','love.','Home','Proxy (Original Mix)'], trackNames = ['greg shilling','ive','wave to earth','Jordan Schor - Home','Martin Garrix - Proxy'], albumArtworks = ['_1','_2','_3','_4','_5'], trackUrl = ['https://yuqing-guo.github.io/musicwidget/SunGo.mp3','https://yuqing-guo.github.io/musicwidget/SupernovaLove.mp3','https://yuqing-guo.github.io/musicwidget/love..mp3'], playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
+    var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, albums = ['the one','supernova love','love.','before spring ends','佩奇的夏天'], trackNames = ['marc indigo','ive','wave to earth','王OK','阁楼演奏班'], albumArtworks = ['_1','_2','_3','_4','_5'], trackUrl = ['https://yuqing-guo.github.io/musicwidget/theone.mp3','https://yuqing-guo.github.io/musicwidget/SupernovaLove.mp3','https://yuqing-guo.github.io/musicwidget/love..mp3', 'https://yuqing-guo.github.io/musicwidget/Beforespringends.mp3','https://yuqing-guo.github.io/musicwidget/yoursummermysea.mp3'], playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
 
     function playPause()
     {
@@ -654,9 +654,3 @@ body
   </script>
 </body>
 </html>
-
-
-    });
-      </script>
-    </body>
-    </html>
